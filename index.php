@@ -21,11 +21,12 @@ class Movie
     {
         $lingua = $this->language;
         $element = '';
-        if ($lingua != 'english') {
-            $element = 'Il film è in lingua italiana';
+        if ($lingua != 'English') {
+            $element = 'Lingua : italiana';
         } else {
-            $element = 'Il film è in lingua inglese';
+            $element = 'Lingua : inglese';
         }
+        return $element;
     }
 }
 
@@ -56,21 +57,21 @@ $movie_2 = new Movie("Quo Vado", "Gennaro Nunziante", "Commedia", "2016-01-01", 
                 <div class="d-flex justify-content-around">
                     <div>
                         <?php
-                        echo "<h2>" . $movie_1->name . "</h2>";
-                        echo "<h5>" . $movie_1->director . "</h5>";
-                        echo "<h5>" . $movie_1->type . "</h5>";
-                        echo "<h5>" . $movie_1->date . "</h5>";
-                        echo "<h5>" . $movie_1->language . "</h5>";
+                        echo "<h2>" . "Titolo:" . " " . $movie_1->name . "</h2>";
+                        echo "<h5>" . "Regista:" . " " . $movie_1->director . "</h5>";
+                        echo "<h5>" . "Genere:" . " " . $movie_1->type . "</h5>";
+                        echo "<h5>" . "Data uscita:" . " " . $movie_1->date . "</h5>";
+                        echo "<h5>" . $movie_1->getLanguage() . "</h5>";
 
                         ?>
                     </div>
                     <div>
                         <?php
-                        echo "<h4>" . $movie_2->name . "</h4>";
-                        echo "<h5>" . $movie_2->director . "</h5>";
-                        echo "<h5>" . $movie_2->type . "</h5>";
-                        echo "<h5>" . $movie_2->date . "</h5>";
-                        echo "<h5>" . $movie_2->language . "</h5>";
+                        echo "<h4>" . "Titolo:" . " "  . $movie_2->name . "</h4>";
+                        echo "<h5>" .  "Regista:" . " " . $movie_2->director . "</h5>";
+                        echo "<h5>" . "Genere:" . " "  . $movie_2->type . "</h5>";
+                        echo "<h5>" . "Data uscita:" . " " . $movie_2->date . "</h5>";
+                        echo "<h5>" . $movie_2->getLanguage() . "</h5>";
                         ?>
 
                     </div>
