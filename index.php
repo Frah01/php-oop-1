@@ -8,10 +8,10 @@ class Movie
     public $date;
 }
 
-$movie = new Movie();
-$movie->name = "Il signore degli anelli";
-$movie->lingua = "Inglese";
-$movie->date = "2002-01-18"
+$movie_1 = new Movie();
+$movie_1->name = "Il signore degli anelli";
+$movie_1->lingua = "Inglese";
+$movie_1->date = "2002-01-18"
 ?>
 
 
@@ -26,7 +26,14 @@ $movie->date = "2002-01-18"
 </head>
 
 <body>
-    <?php ?>
+    <?php
+
+    echo $movie_1->name . " ";
+    echo $movie_1->lingua . " ";
+    echo $movie_1->type . " ";
+    echo $movie_1->date;
+
+    ?>
 </body>
 
 </html>
