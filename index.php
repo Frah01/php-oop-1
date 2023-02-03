@@ -36,10 +36,6 @@ class Movie
 // CREAZIONE ISTANZE DEI FILM
 $movie_1 = new Movie("Il signore degli anelli", "Peter Jackson", array("Fantasy", "Dramatic", "Action"), "2002-01-18", "English");
 $movie_2 = new Movie("Quo Vado", "Gennaro Nunziante", array("Comedy", "Family"), "2016-01-01", "Italian");
-// echo "<pre>";
-// var_dump($movie_1);
-// var_dump($movie_2);
-// echo "</pre>";
 ?>
 
 
