@@ -56,24 +56,31 @@ $movie_2 = new Movie("Quo Vado", "Gennaro Nunziante", "Commedia", "2016-01-01", 
             <div class="col mt-5">
                 <div class="d-flex justify-content-around">
                     <div>
-                        <?php
-                        echo "<h2>" . "Titolo:" . " " . $movie_1->name . "</h2>";
-                        echo "<h5>" . "Regista:" . " " . $movie_1->director . "</h5>";
-                        echo "<h5>" . "Genere:" . " " . $movie_1->type . "</h5>";
-                        echo "<h5>" . "Data uscita:" . " " . $movie_1->date . "</h5>";
-                        echo "<h5>" . $movie_1->getLanguage() . "</h5>";
+                        <div class="card">
+                            <div class="card-body">
+                                <?php
+                                echo "<h2>" . "Titolo:" . " " . $movie_1->name . "</h2>";
+                                echo "<p class='card-text'>" . "Regista:" . " " . $movie_1->director . "</p>";
+                                echo "<p class='card-text'>" . "Genere:" . " " . $movie_1->type . "</p>";
+                                echo "<p class='card-text'>" . "Data uscita:" . " " . $movie_1->date . "</p>";
+                                echo "<p class='card-text'>" . $movie_1->getLanguage() . "</p>";
 
-                        ?>
+                                ?>
+                            </div>
+                        </div>
                     </div>
                     <div>
-                        <?php
-                        echo "<h2>" . "Titolo:" . " "  . $movie_2->name . "</h2>";
-                        echo "<h5>" .  "Regista:" . " " . $movie_2->director . "</h5>";
-                        echo "<h5>" . "Genere:" . " "  . $movie_2->type . "</h5>";
-                        echo "<h5>" . "Data uscita:" . " " . $movie_2->date . "</h5>";
-                        echo "<h5>" . $movie_2->getLanguage() . "</h5>";
-                        ?>
-
+                        <div class="card">
+                            <div class="card-body">
+                                <?php
+                                echo "<h2>" . "Titolo:" . " "  . $movie_2->name . "</h2>";
+                                echo "<p class='card-text'>" .  "Regista:" . " " . $movie_2->director . "</p>";
+                                echo "<p class='card-text'>" . "Genere:" . " "  . $movie_2->type . "</p>";
+                                echo "<p class='card-text'>" . "Data uscita:" . " " . $movie_2->date . "</p>";
+                                echo "<p class='card-text'>" . $movie_2->getLanguage() . "</p>";
+                                ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
