@@ -1,5 +1,5 @@
 <?php
-
+//CREAZIONE CLASSE 
 class Movie
 {
     public $name;
@@ -7,6 +7,8 @@ class Movie
     public $director;
     public $type;
     public $date;
+
+    //CREZIONE CONSTRUCT
 
     function __construct($_name, $_director, $_type, $_date, $_language)
     {
@@ -17,6 +19,8 @@ class Movie
         $this->language = $_language;
     }
 
+
+    // METODO PER DETERMINARE SE LA LINGUA è INGLESE O ITALIANA
     public function getLanguage()
     {
         $lingua = $this->language;
@@ -29,9 +33,9 @@ class Movie
         return $element;
     }
 }
-
-$movie_1 = new Movie("Il signore degli anelli", "Peter Jackson", "Fantasy", "2002-01-18", "English");
-$movie_2 = new Movie("Quo Vado", "Gennaro Nunziante", "Commedia", "2016-01-01", "Italian");
+// CREAZIONE ISTANZE DEI FILM
+$movie_1 = new Movie("Il signore degli anelli", "Peter Jackson", array("Fantasy", "Dramatic", "Action"), "2002-01-18", "English");
+$movie_2 = new Movie("Quo Vado", "Gennaro Nunziante", array("Comedy", "Family"), "2016-01-01", "Italian");
 // echo "<pre>";
 // var_dump($movie_1);
 // var_dump($movie_2);
@@ -61,7 +65,7 @@ $movie_2 = new Movie("Quo Vado", "Gennaro Nunziante", "Commedia", "2016-01-01", 
                                 <?php
                                 echo "<h5 class='card-title'>" . $movie_1->name . "</h5>";
                                 echo "<p class='card-text'>" . "Regista:" . " " . $movie_1->director . "</p>";
-                                echo "<p class='card-text'>" . "Genere:" . " " . $movie_1->type . "</p>";
+                                echo "<p class='card-text'>" . "Genere:" . " " . implode(",", $movie_1->type) . "</p>";
                                 echo "<p class='card-text'>" . "Data uscita:" . " " . $movie_1->date . "</p>";
                                 echo "<p class='card-text'>" . $movie_1->getLanguage() . "</p>";
 
@@ -75,7 +79,7 @@ $movie_2 = new Movie("Quo Vado", "Gennaro Nunziante", "Commedia", "2016-01-01", 
                                 <?php
                                 echo "<h5 class='card-title'>" . $movie_2->name . "</h5>";
                                 echo "<p class='card-text'>" .  "Regista:" . " " . $movie_2->director . "</p>";
-                                echo "<p class='card-text'>" . "Genere:" . " "  . $movie_2->type . "</p>";
+                                echo "<p class='card-text'>" . "Genere:" . " "  . implode(",", $movie_2->type) . "</p>";
                                 echo "<p class='card-text'>" . "Data uscita:" . " " . $movie_2->date . "</p>";
                                 echo "<p class='card-text'>" . $movie_2->getLanguage() . "</p>";
                                 ?>
@@ -86,7 +90,6 @@ $movie_2 = new Movie("Quo Vado", "Gennaro Nunziante", "Commedia", "2016-01-01", 
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
