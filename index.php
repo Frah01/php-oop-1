@@ -59,7 +59,7 @@ $movie_2 = new Movie("Quo Vado", "Gennaro Nunziante", "Commedia", "2016-01-01", 
                         <div class="card">
                             <div class="card-body">
                                 <?php
-                                echo "<h2>" . "Titolo:" . " " . $movie_1->name . "</h2>";
+                                echo "<h5 class='card-title'>" . $movie_1->name . "</h5>";
                                 echo "<p class='card-text'>" . "Regista:" . " " . $movie_1->director . "</p>";
                                 echo "<p class='card-text'>" . "Genere:" . " " . $movie_1->type . "</p>";
                                 echo "<p class='card-text'>" . "Data uscita:" . " " . $movie_1->date . "</p>";
@@ -73,7 +73,7 @@ $movie_2 = new Movie("Quo Vado", "Gennaro Nunziante", "Commedia", "2016-01-01", 
                         <div class="card">
                             <div class="card-body">
                                 <?php
-                                echo "<h2>" . "Titolo:" . " "  . $movie_2->name . "</h2>";
+                                echo "<h5 class='card-title'>" . $movie_2->name . "</h5>";
                                 echo "<p class='card-text'>" .  "Regista:" . " " . $movie_2->director . "</p>";
                                 echo "<p class='card-text'>" . "Genere:" . " "  . $movie_2->type . "</p>";
                                 echo "<p class='card-text'>" . "Data uscita:" . " " . $movie_2->date . "</p>";
