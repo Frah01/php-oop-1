@@ -6,6 +6,14 @@ class Movie
     public $lingua;
     public $type;
     public $date;
+
+    function __construct($_name, $_lingua, $_type, $_date)
+    {
+        $this->name = $_name;
+        $this->lingua = $_lingua;
+        $this->type = $_type;
+        $this->date = $_date;
+    }
 }
 
 $movie_1 = new Movie();
