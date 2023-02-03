@@ -22,15 +22,15 @@ class Movie
         $lingua = $this->language;
         $element = '';
         if ($lingua != 'English') {
-            $element = 'Lingua : italiana';
+            $element = 'Lingua : Italiana';
         } else {
-            $element = 'Lingua : inglese';
+            $element = 'Lingua : Inglese';
         }
         return $element;
     }
 }
 
-$movie_1 = new Movie("Il signore degli anelli", "Peter Jackson", "Dantasy", "2002-01-18", "English");
+$movie_1 = new Movie("Il signore degli anelli", "Peter Jackson", "Fantasy", "2002-01-18", "English");
 $movie_2 = new Movie("Quo Vado", "Gennaro Nunziante", "Commedia", "2016-01-01", "Italian");
 // echo "<pre>";
 // var_dump($movie_1);
@@ -67,7 +67,7 @@ $movie_2 = new Movie("Quo Vado", "Gennaro Nunziante", "Commedia", "2016-01-01", 
                     </div>
                     <div>
                         <?php
-                        echo "<h4>" . "Titolo:" . " "  . $movie_2->name . "</h4>";
+                        echo "<h2>" . "Titolo:" . " "  . $movie_2->name . "</h2>";
                         echo "<h5>" .  "Regista:" . " " . $movie_2->director . "</h5>";
                         echo "<h5>" . "Genere:" . " "  . $movie_2->type . "</h5>";
                         echo "<h5>" . "Data uscita:" . " " . $movie_2->date . "</h5>";
