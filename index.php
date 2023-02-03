@@ -1,3 +1,20 @@
+<?php
+
+class Movie
+{
+    public $name;
+    public $lingua;
+    public $type;
+    public $date;
+}
+
+$movie = new Movie();
+$movie->name = "Il signore degli anelli";
+$movie->lingua = "Inglese";
+$movie->date = "2002-01-18"
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +26,7 @@
 </head>
 
 <body>
-
+    <?php ?>
 </body>
 
 </html>
