@@ -3,23 +3,38 @@
 class Movie
 {
     public $name;
-    public $lingua;
+    public $language;
+    public $director;
     public $type;
     public $date;
 
-    function __construct($_name, $_lingua, $_type, $_date)
+    function __construct($_name, $_director, $_type, $_date, $_language)
     {
         $this->name = $_name;
-        $this->lingua = $_lingua;
+        $this->director = $_director;
         $this->type = $_type;
         $this->date = $_date;
+        $this->language = $_language;
+    }
+
+    public function getLanguage()
+    {
+        $lingua = $this->language;
+        $element = '';
+        if ($lingua != 'english') {
+            $element = 'Il film è in lingua italiana';
+        } else {
+            $element = 'Il film è in lingua inglese';
+        }
     }
 }
 
-$movie_1 = new Movie();
-$movie_1->name = "Il signore degli anelli";
-$movie_1->lingua = "Inglese";
-$movie_1->date = "2002-01-18"
+$movie_1 = new Movie("Il signore degli anelli", "Peter Jackson", "Dantasy", "2002-01-18", "English");
+$movie_2 = new Movie("Quo Vado", "Gennaro Nunziante", "Commedia", "2016-01-01", "Italian");
+// echo "<pre>";
+// var_dump($movie_1);
+// var_dump($movie_2);
+// echo "</pre>";
 ?>
 
 
@@ -30,18 +45,40 @@ $movie_1->date = "2002-01-18"
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Document</title>
 </head>
 
 <body>
-    <?php
+    <div class="container">
+        <div class="row">
+            <div class="col mt-5">
+                <div class="d-flex justify-content-around">
+                    <div>
+                        <?php
+                        echo "<h2>" . $movie_1->name . "</h2>";
+                        echo "<h5>" . $movie_1->director . "</h5>";
+                        echo "<h5>" . $movie_1->type . "</h5>";
+                        echo "<h5>" . $movie_1->date . "</h5>";
+                        echo "<h5>" . $movie_1->language . "</h5>";
 
-    echo $movie_1->name . " ";
-    echo $movie_1->lingua . " ";
-    echo $movie_1->type . " ";
-    echo $movie_1->date;
+                        ?>
+                    </div>
+                    <div>
+                        <?php
+                        echo "<h4>" . $movie_2->name . "</h4>";
+                        echo "<h5>" . $movie_2->director . "</h5>";
+                        echo "<h5>" . $movie_2->type . "</h5>";
+                        echo "<h5>" . $movie_2->date . "</h5>";
+                        echo "<h5>" . $movie_2->language . "</h5>";
+                        ?>
 
-    ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
